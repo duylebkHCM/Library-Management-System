@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootanchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.BorrowBook">
+<children>
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="6.0" prefHeight="130.0" prefWidth="900.0" style="-fx-background-color: #0373BD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="149.0" layoutY="85.0" text="Library Management System" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Demi ITC" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../Image/543px-Logo-hcmut.svg.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+
+                        </ImageView>
+                  <Label layoutX="149.0" layoutY="20.0" prefHeight="65.0" prefWidth="604.0" text="Manage Borrow Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutY="133.0" prefHeight="65.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+               <children>
+                  <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="400.0" promptText="Input Book ID" style="-fx-border-color: #0f125f; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnSearch" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #0f125f; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgSearch" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/image6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Region prefHeight="65.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnReturn" layoutX="460.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+                     <graphic>
+                        <ImageView fx:id="imgReturn" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/image9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnHome" layoutX="847.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+                     <graphic>
+                        <ImageView fx:id="imgHome" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/image5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <SplitPane dividerPositions="0.7422062350119905" layoutY="189.0" prefHeight="375.0" prefWidth="820.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #ffffff; -fx-border-color: #0373bd; -fx-border-width: 2;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="189.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="620.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Label layoutX="31.0" layoutY="14.0" prefWidth="200.0" text="Tittle" textAlignment="RIGHT" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="72.0" prefWidth="200.0" text="Author " textAlignment="RIGHT" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="261.0" prefWidth="200.0" text="Version" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="324.0" prefWidth="200.0" text="Book ID" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="197.0" prefWidth="200.0" text="Publish Year" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="132.0" prefWidth="200.0" text="Genre" textFill="#0f125f" AnchorPane.leftAnchor="35.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTittle" layoutX="200.0" layoutY="7.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtAuthor" layoutX="236.0" layoutY="66.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtGenre" layoutX="236.0" layoutY="126.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtPYear" layoutX="237.0" layoutY="189.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtVersion" layoutX="236.0" layoutY="253.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtID" layoutX="237.0" layoutY="316.0" prefHeight="38.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="Georgia Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="200.0" style="-fx-background-color: #0373bd;" SplitPane.resizableWithParent="false">
+                     <children>
+                        <VBox prefHeight="375.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="130.0" prefWidth="211.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                    <ImageView fitHeight="189.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                       <image>
+                                          <Image url="@../Image/book.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Region layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="132.0" prefWidth="216.0">
+                                       <children>
+                                          <Button fx:id="btnIssue" alignment="CENTER" disable="true" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="43.0" prefWidth="212.0" style="-fx-background-color: #0373bd; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Issue" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnReturnbook" alignment="CENTER" disable="true" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="211.0" style="-fx-background-color: #0373bd; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Return" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
+</children>
+</AnchorPane>

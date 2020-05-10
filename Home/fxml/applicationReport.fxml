@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootanchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Home.Controllers.ReportController">
+<children>
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" disable="false" minHeight="-1.0" minWidth="-1.0" prefHeight="600.0" prefWidth="900.0" styleClass="AnchorPane" visible="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <Pane fx:id="BR" disable="false" layoutX="260.0" prefHeight="600.0" prefWidth="641.0" style="-fx-background-color: #FFFFFF;" styleClass="Pane" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label id="BRF" alignment="CENTER" layoutX="43.0" layoutY="31.0" prefHeight="124.951171875" prefWidth="555.0000999999975" text="BOOK REQUEST FORM" textFill="#0a2868" visible="true">
+          <font>
+            <Font name="System Bold" size="36.0" fx:id="x2" />
+          </font>
+        </Label>
+        <Label contentDisplay="TOP" layoutX="102.0" layoutY="230.0" prefHeight="50.0" prefWidth="110.0" text="Book Title*:" textFill="#0a2868">
+          <font>
+            <Font name="System Bold" size="19.0" fx:id="x1" />
+          </font>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </Label>
+        <TextField fx:id="A" layoutX="224.0" layoutY="346.0" prefHeight="32.0" prefWidth="369.0" />
+        <Label layoutX="102.0" layoutY="335.0" prefHeight="50.951171875" prefWidth="111.0" text="Author*:" textFill="#0a2868">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+        <TextField fx:id="BT" layoutX="221.0" layoutY="242.0" prefHeight="32.0" prefWidth="369.0" />
+        <Button id="Summit" defaultButton="false" font="$x1" layoutX="220.0" layoutY="448.0" mnemonicParsing="false" onAction="#btnSum" prefHeight="60.999977929684974" prefWidth="191.0" style="-fx-background-color: #0373BD;" styleClass="Summit" text="Summit" textFill="WHITE" wrapText="false">
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </Button>
+        <StackPane fx:id="Com" layoutX="115.0" layoutY="110.0" prefHeight="350.0" prefWidth="400.0" styleClass="Pane" visible="false">
+          <children>
+            <Button id="" mnemonicParsing="false" onAction="#btnComSum" prefHeight="136.0" prefWidth="179.0" styleClass="Summit" text="Complete">
+              <stylesheets>
+                <URL value="@../CSSpackageMap/applicationReport.css" />
+              </stylesheets>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+            </Button>
+          </children>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </StackPane>
+        <StackPane id="Com" fx:id="Fail" layoutX="115.0" layoutY="110.0" prefHeight="350.0" prefWidth="400.0" styleClass="Pane" visible="false">
+          <children>
+            <Button id="" mnemonicParsing="false" onAction="#btnFailSum" prefHeight="136.0" prefWidth="179.0" styleClass="Summit" text="Fail">
+              <stylesheets>
+                <URL value="@../CSSpackageMap/applicationReport.css" />
+              </stylesheets>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+            </Button>
+          </children>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </StackPane>
+      </children>
+      <stylesheets>
+        <URL value="@../CSSpackageMap/applicationReport.css" />
+      </stylesheets>
+    </Pane>
+    <Pane fx:id="GR" layoutX="260.0" prefHeight="600.0" prefWidth="641.0" style="-fx-background-color: #FFFFFF;" styleClass="Pane" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+      <children>
+        <Label id="BRF" alignment="CENTER" font="$x2" layoutX="91.0" layoutY="32.0" prefHeight="125.0" prefWidth="474.0" text="GENERATE REPORT" textFill="#0a2868" visible="true" />
+        <Label contentDisplay="TOP" layoutX="105.0" layoutY="235.0" prefHeight="50.0" prefWidth="110.0" text="Sort by:" textFill="#0a2868">
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+        </Label>
+        <ComboBox id="" fx:id="cbSort" editable="false" layoutX="222.0" layoutY="242.0" prefHeight="32.0" prefWidth="369.0" promptText="" style="-fx-border-color: #0a2868;">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </ComboBox>
+        <Label contentDisplay="TOP" layoutX="105.0" layoutY="340.0" prefHeight="50.0" prefWidth="110.0" text="Number:" textFill="#0a2868">
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+        </Label>
+        <ComboBox id="" fx:id="cbNumber" layoutX="222.0" layoutY="348.0" prefHeight="32.0" prefWidth="111.0" promptText="" style="-fx-border-color: #0a2868;">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </ComboBox>
+        <Button id="Summit" defaultButton="false" font="$x1" layoutX="228.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnG" prefHeight="62.0" prefWidth="196.0" style="-fx-background-color: #0373BD;" styleClass="Summit" text="Generate" textFill="WHITE" wrapText="false">
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </Button>
+        <StackPane id="Com" fx:id="ComGen" layoutX="115.0" layoutY="110.0" prefHeight="380.0" prefWidth="425.0" styleClass="Pane" visible="false">
+          <children>
+            <Button id="" mnemonicParsing="false" onAction="#btnComG" prefHeight="136.0" prefWidth="179.0" styleClass="Summit" text="Complete">
+              <stylesheets>
+                <URL value="@../CSSpackageMap/applicationReport.css" />
+              </stylesheets>
+            </Button>
+          </children>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </StackPane>
+      </children>
+      <stylesheets>
+        <URL value="@../CSSpackageMap/applicationReport.css" />
+      </stylesheets>
+    </Pane>
+    <Pane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" layoutX="-2.0" layoutY="0.0" prefHeight="600.0" prefWidth="263.0" styleClass="VBox">
+      <children>
+        <VBox id="" layoutX="0.0" layoutY="350.0" prefHeight="251.0" prefWidth="263.0" styleClass="VBox">
+          <children>
+                  <Button fx:id="btnHome" mnemonicParsing="false" onMouseClicked="#btnH" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="55.0" prefWidth="250.0" style="-fx-background-color: #0373BD;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgHome" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Glow level="0.0" />
+                           </effect>
+                           <image>
+                              <Image url="@../Image/image5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+            <Button fx:id="btnBR" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnBR" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #0373BD;" styleClass="Button" text="Book Request" textFill="WHITE">
+              <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" />
+              </graphic>
+              <stylesheets>
+                <URL value="@../CSSpackageMap/applicationReport.css" />
+              </stylesheets>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+            </Button>
+            <Button fx:id="btnGR" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnGR" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0373BD;" styleClass="Button" text="Generate Report" textFill="WHITE" wrapText="true">
+              <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" />
+              </graphic>
+              <stylesheets>
+                <URL value="@../CSSpackageMap/applicationReport.css" />
+              </stylesheets>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+            </Button>
+          </children>
+          <stylesheets>
+            <URL value="@../CSSpackageMap/applicationReport.css" />
+          </stylesheets>
+        </VBox>
+            <ImageView fitHeight="200.0" fitWidth="196.0" layoutX="30.0" layoutY="73.0">
+               <image>
+                  <Image url="@../Image/543px-Logo-hcmut.svg.png" />
+               </image>
+            </ImageView>
+      </children>
+      <stylesheets>
+        <URL value="@../CSSpackageMap/applicationReport.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../CSSpackageMap/applicationReport.css" />
+  </stylesheets>
+</AnchorPane>
+</children>
+</AnchorPane>

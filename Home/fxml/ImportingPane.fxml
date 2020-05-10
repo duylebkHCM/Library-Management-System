@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane fx:id="rootPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.ControllerImportingPane">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.0" minWidth="10.0" prefWidth="314.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="586.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #0373BD;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/KNCN/1004px-Logo-hcmut.svg.png" />
+               </image>
+            </ImageView>
+            <Label text="Library Management" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label text="System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="108.0" prefWidth="314.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pictures/KNCN/home_24px.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnHome" mnemonicParsing="false" style="-fx-background-color: #0373BD;" text="Home" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" GridPane.columnIndex="1">
+         <children>
+            <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Import New Book Title">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="202.0" prefWidth="586.0">
+               <children>
+                  <Pane prefHeight="152.0" prefWidth="587.0">
+                     <children>
+                        <Label layoutX="157.0" layoutY="14.0" text="Choose importing way:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radbtnList" layoutX="204.0" layoutY="74.0" mnemonicParsing="false" onAction="#changeButtonState" text="Importing by list">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="ImportingWay" />
+                           </toggleGroup>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radbtnForm" layoutX="204.0" layoutY="119.0" mnemonicParsing="false" onAction="#changeButtonState" text="Importing by form" toggleGroup="$ImportingWay">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="111.0" prefWidth="586.0">
+               <children>
+                  <Button fx:id="btnNext" disable="true" mnemonicParsing="false" onAction="#changeScene" prefHeight="39.0" prefWidth="95.0" text="Next">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

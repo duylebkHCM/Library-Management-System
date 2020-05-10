@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0373BD; -fx-border-color: #FFFFFF; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.BookDetailsController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Book Information" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="262.0" prefWidth="751.0">
+         <children>
+            <Pane prefHeight="291.0" prefWidth="587.0">
+               <children>
+                  <Label layoutX="19.0" layoutY="14.0" prefHeight="27.0" prefWidth="50.0" text="Tiltle" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTitle" layoutX="115.0" layoutY="12.0" prefHeight="31.0" prefWidth="443.0" />
+                  <Label layoutX="19.0" layoutY="65.0" text="Author" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAuthor" layoutX="115.0" layoutY="63.0" prefHeight="31.0" prefWidth="198.0" />
+                  <Label layoutX="345.0" layoutY="65.0" text="Edition" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEdition" layoutX="420.0" layoutY="63.0" prefHeight="31.0" prefWidth="138.0" />
+                  <Label layoutX="19.0" layoutY="123.0" text="Category" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="menuCat" layoutX="116.0" layoutY="121.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="198.0" text="Category">
+                     <items>
+                        <RadioMenuItem fx:id="itemBusiness" mnemonicParsing="false" onAction="#getCat" text="Business">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Category" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="itemComic" mnemonicParsing="false" onAction="#getCat" text="Comic" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemComputer" mnemonicParsing="false" onAction="#getCat" text="Computer &amp; Tech" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemEdu" mnemonicParsing="false" onAction="#getCat" text="Edu &amp; Reference" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemLit" mnemonicParsing="false" onAction="#getCat" text="Literature &amp; Fiction" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemMusic" mnemonicParsing="false" onAction="#getCat" text="Music &amp; Art" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemMaga" mnemonicParsing="false" onAction="#getCat" text="Magazine" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemSci" mnemonicParsing="false" onAction="#getCat" text="Science &amp; Math" toggleGroup="$Category" />
+                        <RadioMenuItem fx:id="itemSocial" mnemonicParsing="false" onAction="#getCat" text="Social Science" toggleGroup="$Category" />
+                     </items>
+                  </MenuButton>
+                  <Label layoutX="332.0" layoutY="125.0" text="Quantity" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtQuan" layoutX="422.0" layoutY="123.0" prefHeight="31.0" prefWidth="138.0" />
+                  <Label layoutX="19.0" layoutY="182.0" text="Book Publisher" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPublisher" layoutX="163.0" layoutY="178.0" prefHeight="31.0" prefWidth="151.0" />
+                  <Label layoutX="364.0" layoutY="182.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPrice" layoutX="422.0" layoutY="178.0" prefHeight="31.0" prefWidth="138.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="86.0" prefWidth="751.0" spacing="30.0">
+         <children>
+            <Button fx:id="btnMod" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="44.0" prefWidth="107.0" style="-fx-background-color: #0373BD; -fx-border-color: #FFFFFF;" text="Modify" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOK" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="44.0" prefWidth="105.0" style="-fx-background-color: #0373BD; -fx-border-color: #FFFFFF;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="19.0" prefWidth="749.0">
+         <children>
+            <Label fx:id="label1" prefHeight="9.0" prefWidth="216.0" text="Only Librarian can modify Book Details" textFill="#f5f5f5">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

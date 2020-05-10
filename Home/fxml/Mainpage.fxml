@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Home.Controllers.Controller">
+<children>
+<GridPane alignment="center" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="600.0" prefWidth="270.0" style="-fx-background-color: #0373BD;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="7.0">
+                     <children>
+                        <Rectangle fill="#0373bd" height="242.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Home" fill="#0373bd" height="50.0" layoutX="12.0" layoutY="10.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Import" fill="#0373bd" height="50.0" layoutX="12.0" layoutY="10.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Request" fill="#0373bd" height="50.0" layoutX="10.0" layoutY="10.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Search" fill="#0373bd" height="50.0" layoutX="10.0" layoutY="300.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Location" fill="#0373bd" height="50.0" layoutX="10.0" layoutY="400.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                        <Rectangle fx:id="btnL_Borrow" fill="#0373bd" height="50.0" layoutX="10.0" layoutY="450.0" stroke="#0373bd" strokeType="INSIDE" width="7.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="263.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" top="10.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../Image/543px-Logo-hcmut.svg.png" />
+                           </image>
+                           <effect>
+                              <Reflection fraction="0.45" topOffset="0.5" topOpacity="0.14" />
+                           </effect>
+                        </ImageView>
+                        <Label text="Library Management" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Demi ITC" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="180.0" prefWidth="250.0" text="System" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Demi ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="btnHome" onMouseClicked = "#onSideMenubtnClick" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Home" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgHome"  fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image5.png" />
+                                 </image>
+                                 <effect>
+                                    <Glow level="0.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="btnImport" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onSideMenubtnClick" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Add New Books" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgImport" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image4.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnRequest" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#onSideMenubtnClick" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Book Request" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgRequest" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image3.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnSearch" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#onSideMenubtnClick" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Search Tool" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgSearch" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image6.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnLocation" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#onSideMenubtnClick" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Book Location" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgLocation" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image7.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnBorrow" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#onSideMenubtnClick" onMouseEntered="#onSideMenubtnEnter" onMouseExited="#onSideMenubtnLeave" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #0373BD;" text="    Book Borrowing" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="imgBorrow" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/image11.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Region prefHeight="10.0" prefWidth="260.0" VBox.vgrow="ALWAYS" />
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="211.0" prefWidth="250.0" text="Version 1.0" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Demi ITC" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label layoutX="312.0" layoutY="24.0" text="Ho Chi Minh University of Technology" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Eras Demi ITC" size="33.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.653846153846154" endY="0.8461538461538463" startX="0.653846153846154" startY="0.3173076923076923">
+                     <stops>
+                        <Stop color="#057ef8" />
+                        <Stop color="#51e6f0" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="306.0" layoutY="58.0" text="Phone: (84.8) 38647256 ext. 5419, 5420. Email: thuvien@hcmut.edu.vn" textFill="#0f125f" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="Eras Demi ITC" size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <AnchorPane layoutX="269.0" prefHeight="600.0" prefWidth="634.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="img1" fitWidth="630.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="254.51219177246094" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+                     <image>
+                        <Image url="@../Image/KQSTJ94.gif" />
+                     </image>
+                  </ImageView>
+                  <Region layoutX="3.0" layoutY="344.0" prefHeight="17.0" prefWidth="630.0" />
+                  <ImageView fx:id="img2" fitWidth="630.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0">
+                     <image>
+                        <Image url="@../Image/T5ZE993.gif" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="H_RESIZE" />
+                     </cursor>
+                  </ImageView>
+                  <Line endX="440.878662109375" endY="-1.242640495300293" layoutX="189.0" layoutY="101.0" startX="-185.0" strokeWidth="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.63603925704956">
+                     <fill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.8221153846153847" endY="0.5240384615384616" startX="0.5096153846153846" startY="0.5432692307692307">
+                           <stops>
+                              <Stop color="#ba6e00" />
+                              <Stop color="#f2e82d" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.764423076923077" endY="0.37019230769230765" startX="0.5096153846153846" startY="0.3701923076923077">
+                           <stops>
+                              <Stop color="#d0750d" />
+                              <Stop color="#ffd630" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
+</children>
+</AnchorPane>

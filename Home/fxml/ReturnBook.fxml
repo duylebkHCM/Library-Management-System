@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.ReturnBook">
+   <children>
+      <Label layoutX="54.0" layoutY="47.0" text="Input Borrower Infomation" textFill="#0f125f" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="45.0">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="80.0" layoutY="245.0" prefWidth="150.0" text="Issue Code" textFill="#0373bd" AnchorPane.leftAnchor="80.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIssue_Code" layoutX="250.0" layoutY="243.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="120.0">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="80.0" layoutY="312.0" prefWidth="150.0" text="Return Date" textFill="#0373bd" AnchorPane.leftAnchor="80.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateReturn" layoutX="250.0" layoutY="310.0" prefHeight="26.0" prefWidth="530.0" />
+      <Button fx:id="btnHome" layoutX="419.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+         <graphic>
+            <ImageView fx:id="imgHome" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/image5.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="477.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+         <graphic>
+            <ImageView fx:id="imgCancel" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/image10.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnOkay" layoutX="362.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+         <graphic>
+            <ImageView fx:id="imgOkay" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/image8.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="txtBookID" alignment="CENTER_RIGHT" layoutX="686.0" layoutY="58.0" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: #ffffff;" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="58.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="655.0" layoutY="62.0" prefHeight="21.0" prefWidth="89.0" text="Book ID:" textFill="#0373bd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

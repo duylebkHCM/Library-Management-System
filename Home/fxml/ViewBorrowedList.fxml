@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.ViewList">
+   <children>
+      <Pane layoutX="6.0" prefHeight="130.0" prefWidth="900.0" style="-fx-background-color: #0373BD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="149.0" layoutY="85.0" text="Library Management System" textFill="WHITE">
+               <font>
+                  <Font name="Eras Demi ITC" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../Image/543px-Logo-hcmut.svg.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <Label layoutX="149.0" layoutY="20.0" prefHeight="65.0" prefWidth="604.0" text="Manage Borrow Status" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox layoutY="133.0" prefHeight="65.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+         <children>
+            <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: #0f125f; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSearch" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #0f125f; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgSearch" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/image6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ComboBox fx:id="cbxOptions" prefWidth="150.0" promptText="Options">
+               <HBox.margin>
+                  <Insets left="10.0" top="17.0" />
+               </HBox.margin>
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:id="opBID" fx:value="BookID" />
+                     <String fx:id="opStat" fx:value="Status" />
+                     <String fx:id="opIssueDate" fx:value="Issue Date" />
+                     <String fx:id="opDueDate" fx:value="Due Date" />
+                     <String fx:id="opReturnDate" fx:value="Return Date" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Region prefHeight="65.0" prefWidth="170.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnReturn" layoutX="460.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+               <graphic>
+                  <ImageView fx:id="imgReturn" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/image9.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnHome" layoutX="847.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#onbtnClick" onMouseEntered="#onbtnEnter" onMouseExited="#onbtnLeave" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33ffcc;">
+               <graphic>
+                  <ImageView fx:id="imgHome" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/image5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="30.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="scrlPane" layoutX="28.0" layoutY="200.0" prefHeight="385.0" prefWidth="843.0">
+         <content>
+            <TableView fx:id="tblInfo" prefHeight="2000.0" prefWidth="1368.0">
+               <columns>
+                  <TableColumn fx:id="colBookID" prefWidth="76.0" text="Book ID" />
+                  <TableColumn fx:id="colName" prefWidth="185.0" text="Borrower Name" />
+                  <TableColumn fx:id="colID" prefWidth="102.0" text="ID" />
+                  <TableColumn fx:id="colPhone" prefWidth="110.0" text="Phone" />
+                  <TableColumn fx:id="colEmail" prefWidth="193.0" text="Email" />
+                  <TableColumn fx:id="colAddress" prefWidth="173.0" text="Address" />
+                  <TableColumn fx:id="colIssueDate" prefWidth="106.0" text="Issue Date" />
+                  <TableColumn fx:id="colDueDate" prefWidth="106.0" text="Due Date" />
+                  <TableColumn fx:id="colStatus" prefWidth="101.0" text="Status" />
+                  <TableColumn fx:id="colIssueCode" prefWidth="96.0" text="Issue Code" />
+                  <TableColumn fx:id="colReturnDate" prefWidth="123.0" text="Return Date" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

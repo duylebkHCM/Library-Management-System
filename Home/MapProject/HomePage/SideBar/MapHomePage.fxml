@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0373BD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.MapProject.HomePage.SideBar.HomePageController">
+   <children>
+      <BorderPane prefHeight="130.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Label id="labelhome" fx:id="label" stylesheets="@../../../CSSpackageMap/HomePage.css" text="MAP GENERATOR" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <GridPane fx:id="grid" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="200.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="3.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="3.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="23.0" minHeight="15.0" percentHeight="5.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="15.0" minHeight="7.0" percentHeight="20.0" prefHeight="7.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton id="button" fx:id="btnmap" alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="142.0" prefWidth="251.0" stylesheets="@../../../CSSpackageMap/HomePage.css" text="Map" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="121.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ImageMap/map_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button" fx:id="btnBack" buttonType="RAISED" maxWidth="1.7976931348623157E308" prefHeight="61.0" prefWidth="251.0" style="-fx-background-color: #0095C8;" stylesheets="@../../../CSSpackageMap/HomePage.css" text="BACK" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <JFXButton fx:id="btnedit" buttonType="RAISED" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="142.0" prefWidth="251.0" stylesheets="@../../../CSSpackageMap/HomePage.css" text="Edit" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="96.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ImageMap/edit_file_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btndash" buttonType="RAISED" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="142.0" stylesheets="@../../../CSSpackageMap/HomePage.css" text="Dash board" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ImageMap/statistics_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <BorderPane fx:id="bdpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="400.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" BorderPane.alignment="CENTER_LEFT" />
+         </center>
+      </BorderPane>
+      <JFXHamburger fx:id="hamburger" layoutX="831.0" layoutY="52.0" spacing="5.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="60.0" />
+   </children>
+</AnchorPane>

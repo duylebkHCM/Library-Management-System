@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainSelect" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0373BD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controllers.SelectController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="200.0">
+         <left>
+            <JFXButton id="buttonL" fx:id="btnlibrarian" onMouseClicked="#onbtnClick" buttonType="RAISED" prefHeight="77.0" prefWidth="273.0" stylesheets="@../CSSpackageMap/HomePage.css" text="LIBRARIAN" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT" />
+         </left>
+         <right>
+            <JFXButton id="buttonR" fx:id="btnReader" onMouseClicked="#onbtnClick" buttonType="RAISED" prefHeight="77.0" prefWidth="273.0" stylesheets="@../CSSpackageMap/HomePage.css" text="READER" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT" />
+         </right>
+         <top>
+            <Label id="labelhome" prefHeight="121.0" prefWidth="250.0" style="-fx-alignment: CENTER;" stylesheets="@../CSSpackageMap/HomePage.css" text="YOU ARE" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <Label prefHeight="69.0" prefWidth="91.0" text="Version 1.0" textFill="WHITE" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

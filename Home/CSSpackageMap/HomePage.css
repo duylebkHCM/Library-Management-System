@@ -1,0 +1,22 @@
+.labelhome{
+	-fx-font-size:48px;
+	-fx-font-weight:bold;
+	-fx-font-family: "Eras Demi ITC" ;
+}
+.label{
+	-fx-font-size:32px;
+	-fx-font-family: "System";
+	-fx-font-weight:bold;
+	-fx-text-fill:#ffffff;
+}
+.button{
+	-fx-font-family: "System";
+	-fx-font-weight:bold;
+	-fx-font-size:16px;
+	-fx-text-fill:#ffffff;
+	-fx-background-color:#0373bd;
+}
+.button:hover{
+	-fx-background-color:#80cbc4 ;
+	-fx-border-color: #81d4fa ;
+}

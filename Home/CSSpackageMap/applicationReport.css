@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.Button
+{
+	-fx-background-color:#0373BD;
+}
+.Button:hover
+{
+	-fx-background-color:  #92CCFD;
+}
+.Button:pressed
+{
+	-fx-background-color: #178CD2;
+}
+.VBox
+{
+	-fx-background-color: #0373BD;
+}
+.AnchorPane
+{
+	-fx-background-color: #fff;
+}
+.Summit
+{
+	-fx-background-color: #fff;
+}
+.Summit:hover{
+	-fx-background-color: #F0F0F0;
+}
+.Pane
+{
+	-fx-background-color: #B6DCFF;
+}
+.combo-box{
+	-fx-background-color: #fff;
+}

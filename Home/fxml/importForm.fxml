@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootanchor" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="Home.Controllers.ControllerImportForm">
+<children>
+<GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.0" minWidth="10.0" prefWidth="314.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="656.0" minWidth="10.0" prefWidth="586.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #0373BD;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/KNCN/1004px-Logo-hcmut.svg.png" />
+               </image>
+            </ImageView>
+            <Label text="Library Management" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label text="System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="108.0" prefWidth="314.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pictures/KNCN/home_24px.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnHome"  mnemonicParsing="false" style="-fx-background-color: #0373BD;" text="Home" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" GridPane.columnIndex="1" style="-fx-background-color: #ffffff;">
+         <children>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Importing Form">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="279.0" prefWidth="586.0">
+               <children>
+                  <Pane prefHeight="291.0" prefWidth="587.0">
+                     <children>
+                        <Label layoutX="31.0" layoutY="14.0" prefHeight="27.0" prefWidth="50.0" text="Tiltle" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtTitle" layoutX="104.0" layoutY="12.0" prefHeight="31.0" prefWidth="435.0" />
+                        <Label layoutX="29.0" layoutY="65.0" text="Author" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAuthor" layoutX="106.0" layoutY="63.0" prefHeight="31.0" prefWidth="205.0" />
+                        <Label layoutX="334.0" layoutY="65.0" text="Edition" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEdition" layoutX="398.0" layoutY="63.0" prefHeight="31.0" prefWidth="138.0" />
+                        <Label layoutX="26.0" layoutY="123.0" text="Category" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <MenuButton fx:id="menuCat" layoutX="106.0" layoutY="121.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="205.0" text="Category">
+                           <items>
+                              <RadioMenuItem fx:id="itemBusiness" mnemonicParsing="false" onAction="#getCat" text="Business">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Category" />
+                                 </toggleGroup></RadioMenuItem>
+                              <RadioMenuItem fx:id="itemComic" mnemonicParsing="false" onAction="#getCat" text="Comic" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemComputer" mnemonicParsing="false" onAction="#getCat" text="Computer &amp; Tech" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemEdu" mnemonicParsing="false" onAction="#getCat" text="Edu &amp; Reference" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemLit" mnemonicParsing="false" onAction="#getCat" text="Literature &amp; Fiction" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemMusic" mnemonicParsing="false" onAction="#getCat" text="Music &amp; Art" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemMaga" mnemonicParsing="false" onAction="#getCat" text="Magazine" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemSci" mnemonicParsing="false" onAction="#getCat" text="Science &amp; Math" toggleGroup="$Category" />
+                              <RadioMenuItem fx:id="itemSocial" mnemonicParsing="false" onAction="#getCat" text="Social Science" toggleGroup="$Category" />
+                           </items>
+                        </MenuButton>
+                        <Label layoutX="327.0" layoutY="125.0" text="Quantity" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtQuan" layoutX="408.0" layoutY="124.0" prefHeight="31.0" prefWidth="138.0" />
+                        <Label layoutX="24.0" layoutY="182.0" text="Book Publisher" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPublisher" layoutX="151.0" layoutY="178.0" prefHeight="31.0" prefWidth="159.0" />
+                        <Label layoutX="350.0" layoutY="182.0" text="Price" underline="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPrice" layoutX="401.0" layoutY="178.0" prefHeight="31.0" prefWidth="138.0" />
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="111.0" prefWidth="586.0" spacing="30.0">
+               <children>
+                  <Button fx:id="btnImport" mnemonicParsing="false" onAction="#openNewStage" prefHeight="44.0" prefWidth="107.0" text="Import">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReturn" mnemonicParsing="false"  prefHeight="44.0" prefWidth="105.0" text="Return">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
+</children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.MapProject.HomePage.EditPage.EditController">
+   <children>
+      <GridPane layoutX="143.0" prefHeight="500.0" prefWidth="640.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane id="anchorPane" fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #e3f2fd;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <Label id="labeledit" layoutX="25.0" layoutY="36.0" prefHeight="38.0" prefWidth="208.0" text="Select bookshelf's color">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="319.0" layoutY="36.0" prefHeight="38.0" prefWidth="221.0" text="Select background's color">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkBox" layoutX="208.0" layoutY="207.0" prefHeight="25.0" prefWidth="100.0" selected="true" text="Visible" />
+                  <Label layoutX="25.0" layoutY="201.0" prefHeight="38.0" prefWidth="160.0" text="Book Information">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ColorPicker fx:id="bookshelfColor" layoutX="233.0" layoutY="44.0" prefHeight="25.0" prefWidth="62.0" translateY="-5.0" />
+                  <ColorPicker fx:id="backgroundColor" layoutX="548.0" layoutY="43.0" prefHeight="25.0" prefWidth="62.0" translateY="-5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Label id="label" layoutX="27.0" layoutY="22.0" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../../CSSpackageMap/HomePage.css" text="EDIT" textFill="WHITE" />
+   </children>
+</AnchorPane>
